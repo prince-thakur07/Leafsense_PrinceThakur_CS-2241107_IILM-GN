@@ -1,0 +1,23 @@
+# Render Blueprint: LeafSense Web Service
+# Deploy from GitHub; use Web Service (not Static Site).
+services:
+  - type: web
+    name: leafsense
+    runtime: python
+    region: oregon
+
+    buildCommand: |
+      pip install -r requirements.txt
+      cd leaf-doctor-frontend-main && npm install && npm run build && cd ..
+
+    startCommand: gunicorn --bind 0.0.0.0:$PORT --workers 1 --threads 2 app:app
+
+    envVars:
+      - key: FLASK_DEBUG
+        value: "false"
+      # Saves ~400MB RAM on 512MB free tier (skips second EfficientNet for non-plant filter)
+      - key: DISABLE_PLANT_CHECKER
+        value: "1"
+      # Load disease model on first /predict instead of at startup (reduces startup RAM so service can bind to port)
+      - key: LAZY_LOAD_MODEL
+        value: "1"

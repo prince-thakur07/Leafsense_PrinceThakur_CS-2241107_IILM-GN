@@ -1,0 +1,52 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Frontend build output
+leaf-doctor-frontend-main/dist/
+
+# Uploads and temp runtime files
+uploads/
+*.tmp
+*.temp
+
+# Large model/checkpoint artifacts
+*.pth
+checkpoint_latest.pth
+
+# Generated datasets (local artifacts)
+LeafSense binary dataset/
+leafsense_binary_dataset/
+
+# Local ad-hoc files
+New Text Document.txt
+WhatsApp Image*
+
+# IDE / OS
+.idea/
+.vscode/
+.cursor/
+.DS_Store
+Thumbs.db
+
+# Env files with secrets
+.env
+.env.local
+.env.*.local

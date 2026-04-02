@@ -1,0 +1,11 @@
+{
+  "name": "plant-front-end",
+  "private": true,
+  "description": "LeafSense - Plant Disease Detection (frontend + backend)",
+  "scripts": {
+    "dev": "npm run dev --prefix leaf-doctor-frontend-main",
+    "build": "npm run build --prefix leaf-doctor-frontend-main",
+    "preview": "npm run preview --prefix leaf-doctor-frontend-main",
+    "start": "npm run dev --prefix leaf-doctor-frontend-main"
+  }
+}

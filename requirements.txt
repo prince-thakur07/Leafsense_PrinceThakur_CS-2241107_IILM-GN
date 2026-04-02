@@ -1,0 +1,9 @@
+# Backend and ML (use a virtualenv)
+# For torch/torchvision, prefer: pip install torch torchvision from https://pytorch.org for your OS/CUDA
+flask>=2.0,<4
+Pillow>=9.0
+timm>=0.9.0
+torch>=2.0
+torchvision>=0.15.0
+gunicorn>=21.0
+scikit-learn>=1.0
